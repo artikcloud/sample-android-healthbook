@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Layout for weather forecast list item for future day (not today) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!--<ImageView
+        android:id="@+id/list_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"/>-->
+    <ImageView
+        android:id="@+id/list_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mypedometer_64"/>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Steps"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distance Travelled"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/list_item_steps_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000"/>
+
+        <TextView
+            android:id="@+id/list_item_distance_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.1"/>
+    </LinearLayout>
+
+</LinearLayout>

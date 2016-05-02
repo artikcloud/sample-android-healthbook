@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sample.artik.cloud.healthbook">
+
+    <!-- This permission is necessary in order for Sunshine to perform network access. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="localhost"
+                    android:scheme="artikcloud" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ProfileActivity"
+            android:label="Healthbook"
+            android:parentActivityName=".LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sample.artik.cloud.healthbook.LoginActivity" />
+        </activity>
+        <activity android:name=".MessagesActivity"
+            android:label="Healthbook"
+            android:parentActivityName=".ProfileActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sample.artik.cloud.healthbook.ProfileActivity" />
+        </activity>
+        <activity
+            android:name=".DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName=".MessagesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sample.artik.cloud.healthbook.MessagesActivity" />
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MessagesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sample.artik.cloud.healthbook.MessagesActivity" />
+        </activity>
+        <activity
+            android:name=".PedometerActivity"
+            android:label="@string/title_activity_pedometer"
+            android:parentActivityName=".MessagesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sample.artik.cloud.healthbook.MessagesActivity" />
+        </activity>
+    </application>
+
+</manifest>

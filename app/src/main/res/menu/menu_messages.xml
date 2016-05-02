@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MessagesActivity">
+
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_location"
+        android:title="@string/action_location"
+        android:icon="@android:drawable/ic_dialog_map"
+        app:showAsAction="always" />
+    <item android:id="@+id/action_pedometer"
+        android:title="@string/action_pedometer"
+        android:icon="@android:drawable/ic_input_add"
+        app:showAsAction="always" />
+
+</menu>
